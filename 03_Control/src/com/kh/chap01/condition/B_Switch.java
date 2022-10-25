@@ -2,7 +2,6 @@ package com.kh.chap01.condition;
 
 import java.util.Scanner;
 
-import com.sun.java.util.jar.pack.Instruction.Switch;
 
 public class B_Switch {
 
@@ -99,6 +98,64 @@ public class B_Switch {
 		
 		// xx의 가격은 xxx원 입니다.
 		System.out.println(fruit + "의 가격은 " + price + "원 입니다.");
+		
+	}
+	
+	public void method3() {
+		
+		// 등급별 권한
+		// 1. 관리권한, 글쓰기권한, 읽기권한
+		// 2. 글쓰기권한, 읽기권한
+		// 3. 읽기권한
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("등급(정수) : ");
+		int level = sc.nextInt();
+		
+		switch (level) {
+		case 1:
+			System.out.println("관리권한");
+		case 2:
+			System.out.println("글쓰기권한");
+		case 3:
+			System.out.println("읽기권한");
+
+		}
+		
+	}
+	
+	public void method4() {
+		
+		// 월을 입력받아 해당 월의 마지막 날짜 출력
+		// 1, 3, 5, 7, 8, 10, 12 => 31일
+		// 4, 6, 9, 11           => 30일
+		// 2                     => 28일 또는 29일
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("1월~12월까지 중 하나를 입력(정수로) : ");
+		int month = sc.nextInt();
+		
+		switch (month) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12: System.out.println("입력하신 월은 31일까지 입니다.");
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11: System.out.println("입력하신 월은 30일까지 입니다.");
+			break;
+		case 2: System.out.println("입력하신 월은 28일 또는 29일까지 입니다.");
+			break;
+		default: System.out.println("반드시 1월~12월까지를 입력해야 합니다.");
+			break;
+		}
 		
 	}
 }
