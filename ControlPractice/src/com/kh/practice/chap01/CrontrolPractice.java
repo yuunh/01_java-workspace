@@ -144,6 +144,29 @@ public class CrontrolPractice {
 		
 	}
 	
+	public void practice5_1() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String userId = "myId";
+		String userPw = "myPw12";
+		
+		System.out.print("아이디 : ");
+		String id = sc.nextLine();
+		
+		System.out.print("비밀번호 : ");
+		String pw = sc.nextLine();
+		
+		if (id.equals(userId) && pw.equals(userPw)) {
+			System.out.println("로그인 성공");
+		} else if (id.equals(userId) && !(pw.equals(userPw))) { // 논리 부정 연산자
+			System.out.println("비밀번호가 틀렸습니다.");
+		} else if (!(id.equals(userId)) && pw.equals(userPw)) {
+			System.out.println("아이디가 틀렸습니다.");
+		}
+	}
+
+	
 	public void practice6() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -240,6 +263,50 @@ public class CrontrolPractice {
 
 	} 
 	
+	public void practice8_1() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("피연산자1 입력 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("피연산자2 입력 : ");
+		int num2 = sc.nextInt();
+		
+		sc.nextLine(); // 버퍼에 남아있는 엔터 제거 메소드
+		
+		System.out.print("연산자를 입력(+,-,*,/,%) : ");
+		char op = sc.nextLine().charAt(0);
+	
+		int result = 0;
+		
+		if ((num1 > 0) && (num2 > 0)) {
+			switch (op) {
+			case '+':
+				result = (num1 + num2);
+				break;
+			case '-':
+				result = (num1 - num2);
+				break;
+			case '*':
+				result = (num1 * num2);
+				break;
+			case '/':
+				result = (num1 / num2);
+				break;
+			case '%':
+				result = (num1 % num2);
+				break;
+			default:
+				System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+				return;
+			}
+			System.out.printf("%d %c %d = %d\n", num1, op, num2, result);
+		} else {
+			System.out.println("잘못 입력하셨습니다. 프로그램을 종료합니다.");
+		}
+	}
+	
 	public void practice9() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -268,17 +335,17 @@ public class CrontrolPractice {
 			if (sum >= 70) {
 				System.out.println("중간 고사 점수(20) : " + num5);
 				System.out.println("기말 고사 점수(30) : " + num6);
-				System.out.println("과제 고사    (30) : " + num7);
-				System.out.println("출석 고사    (20) : " + num8);
+				System.out.println("과제 점수    (30) : " + num7);
+				System.out.println("출석 점수    (20) : " + num8);
 				System.out.println("총점 : " + sum);
 				System.out.println("PASS");
 			} else {
 				System.out.println("중간 고사 점수(20) : " + num5);
 				System.out.println("기말 고사 점수(30) : " + num6);
-				System.out.println("과제 고사    (30) : " + num7);
-				System.out.println("출석 고사    (20) : " + num8);
+				System.out.println("과제 점수    (30) : " + num7);
+				System.out.println("출석 점수    (20) : " + num8);
 				System.out.println("총점 : " + sum);
-				System.out.println("Fall [점수 미달}");
+				System.out.println("Fall [점수 미달]");
 			}
 		} else {
 			System.out.println("Fail [출석 회수 부족 (" + num4 + "/20)]");
@@ -286,6 +353,47 @@ public class CrontrolPractice {
 		
 	}
 	
+	public void practice9_1() {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("중간 고사 점수 : ");
+		double mScore = sc.nextDouble();
+
+		System.out.print("기말 고사 점수 : ");
+		double fScore = sc.nextDouble();
+
+		System.out.print("과제 점수 : ");
+		double hScore = sc.nextDouble();
+
+		System.out.print("출석 회수 : ");
+		double aScore = sc.nextDouble();
+
+		if (aScore <= 14) {
+			System.out.println("======== 결과 ========");
+			System.out.println("Fail [출석 회수 부족 (" + (int)aScore + "/20)]"); // 형변환
+			return;
+		}
+		System.out.println("======== 결과 ========");
+		System.out.println("중간 고사 점수(20) : " + (mScore = mScore * 0.2));
+		System.out.println("기말 고사 점수(30) : " + (fScore = fScore * 0.3));
+		System.out.println("과제 점수    (30) : " + (hScore = hScore * 0.3));
+		System.out.println("출석 점수    (20) : " + aScore);
+		
+		double sumScore = mScore + fScore + hScore + aScore;
+		
+		System.out.println("총점 : " + sumScore);
+		
+		if (aScore > 14) {
+			if (sumScore >= 70) {
+				System.out.println("PASS");
+			} else {
+				System.out.println("Fall [점수 미달]");
+			}
+		}
+	
+	}
+		
 	public void practice10() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -301,9 +409,9 @@ public class CrontrolPractice {
 		System.out.println("8. 계산기");
 		System.out.println("9. P/F");
 		System.out.print("선택 : ");
-		int num = sc.nextInt();
+		int menu = sc.nextInt();
 		
-		switch (num) {
+		switch (menu) {
 		case 1:
 			practice1();
 			break;
@@ -331,7 +439,6 @@ public class CrontrolPractice {
 		case 9:
 			practice9();
 			break;
-		
 		}
 		
 		
