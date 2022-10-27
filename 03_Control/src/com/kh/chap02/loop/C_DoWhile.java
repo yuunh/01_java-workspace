@@ -8,7 +8,7 @@ public class C_DoWhile {
 	 * do-while문
 	 * 
 	 * do {
-	 * 		반복적으로
+	 * 		반복적으로 실행할 코드;
 	 * }
 	 * 
 	 * 처음에 무조건 실행코드 실행

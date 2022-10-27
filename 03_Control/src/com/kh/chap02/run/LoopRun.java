@@ -40,7 +40,7 @@ public class LoopRun {
 		C_DoWhile c = new C_DoWhile();
 		// c.method1();
 		// c.method2();
-		c.method3();
+		// c.method3();
 	}
 
 }
