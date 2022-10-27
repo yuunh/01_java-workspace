@@ -53,7 +53,7 @@ public class B_Continue {
 		// 2~9 단 출력
 		// 단, 3의 배수단은 빼고 출력
 		
-		for (int dan = 1; dan < 10; dan++) {
+		for (int dan = 2; dan < 10; dan++) {
 			if (dan % 3 == 0) {
 				continue;
 			}
