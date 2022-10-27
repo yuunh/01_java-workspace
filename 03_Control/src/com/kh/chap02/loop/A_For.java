@@ -9,7 +9,7 @@ public class A_For {
 	 * 프로그램 흐름을 제어하는 제어문 중 하나
 	 * 어떤 실행코드를 반복적으로 수행시켜줌
 	 * 
-	 * 크게 두 종류로 나뉨 (for문 / while문(do-whill문))
+	 * 크게 두 종류로 나뉨 (for문 / while문(do-while문))
 	 * 
 	 * for문
 	 * 
@@ -317,6 +317,101 @@ public class A_For {
 			} 
 		} else {
 			System.out.println("2~9 사이의 숫자를 입력해야됩니다. 잘못입력했습니다.");
+		}
+		
+	}
+	
+	public void method13() {
+	
+		// 2부터 9까지의 랜덤값 발생시켜서 랜덤단 출력하기
+		
+		int dan = (int)(Math.random() * 8 + 2);
+		//			0.0 <= < 1.0
+		//	*8		0.0 <= < 8.0
+		//	+2		2.0 <= < 10.0
+		//	강제형변환	2   <= < 10
+		// 추출할 랜덤값 갯수 곱하기, 시작 수 맨 뒤에 더하기
+		
+		System.out.println("===" + dan + "===");
+		
+		for (int i = 1; i <= 9; i++) {
+			System.out.printf("%d x %d = %d\n", dan, i, dan * i);
+		}
+		
+	}
+	
+	public void method14() {
+		
+		// 중첩 for문
+		
+		// 1 2 3 4 5
+		
+		for (int j = 1; j < 4; j++) {
+			for (int i = 1; i < 6; i++) {
+				System.out.print(i + " ");
+			} 
+			System.out.println();
+		}
+		
+	}
+	
+	public void method15() {
+		
+		// ****
+		// ****
+		// ****
+		// ****
+		
+		for (int j = 1; j < 5; j++) {
+			for (int i = 1; i < 5; i++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+	 
+	public void method16() {
+		
+		// 1***
+		// *2**
+		// **3*
+		// ***4
+		
+		// 행은 1~4까지 반복 => 바깥쪽 for문
+		// 매 행 고정일때 열은 1~4까지 반복 => 안쪽 for문
+		
+		for (int j = 1; j < 5; j++) {
+			for (int i = 1; i < 5; i++) {
+				if (j == i) {
+					System.out.print(i);
+				} else {
+				System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	public void method17() {
+		
+		// 2단부터 9단까지 다 출력
+		
+		for (int dan = 2; dan < 10; dan++) {
+			System.out.println("=== " + dan + "단 ===");
+			for (int i = 1; i < 10; i++) {
+				System.out.printf("%d x %d = %d\n", dan, i, dan * i);
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	public void method18() {
+		
+		for (; ; ) { // 조건식 자리 생략시 기본적으로 true => 무한 반복!
+			System.out.println("안녕");
 		}
 		
 	}
