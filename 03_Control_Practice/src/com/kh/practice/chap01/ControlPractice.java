@@ -3,29 +3,42 @@ package com.kh.practice.chap01;
 import java.util.Scanner;
 
 public class ControlPractice {
+	
 	public void practice1() {
+		
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("1.입력 ");
 		System.out.println("2.수정 ");
 		System.out.println("3.조회 ");
 		System.out.println("4.삭제 ");
 		System.out.println("7.종료 ");
 		System.out.print("메뉴 번호를 입력하세요 : ");
-		
+
 		int menu = sc.nextInt();
 		String menuName = "";
-		
-		switch(menu) {
-		case 1 : menuName = "입력"; break;
-		case 2 : menuName = "수정"; break;
-		case 3 : menuName = "조회"; break;
-		case 4 : menuName = "삭제"; break;
-		case 7 : System.out.println("프로그램이 종료됩니다."); return;
+
+		switch (menu) {
+		case 1:
+			menuName = "입력";
+			break;
+		case 2:
+			menuName = "수정";
+			break;
+		case 3:
+			menuName = "조회";
+			break;
+		case 4:
+			menuName = "삭제";
+			break;
+		case 7:
+			System.out.println("프로그램이 종료됩니다.");
+			return;
 		}
-		
+
 		System.out.println(menuName + " 메뉴입니다.");
 	}
-	
+
 	public void practice2() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("숫자를 한 개 입력하세요 :");
@@ -43,28 +56,30 @@ public class ControlPractice {
 	}
 	
 	public void practice3() {
+		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("국어점수 : " );
+		
+		System.out.print("국어점수 : ");
 		int kor = sc.nextInt();
-		System.out.print("수학점수 : " );
+		System.out.print("수학점수 : ");
 		int math = sc.nextInt();
-		System.out.print("영어점수 : " );
+		System.out.print("영어점수 : ");
 		int eng = sc.nextInt();
-		
-		int sum = kor+math+eng;
+
+		int sum = kor + math + eng;
 		double avg = sum / 3.0;
-		
-		if((kor >= 40) && (math >= 40) && (eng >= 40) && (avg >= 60)) {
+
+		if ((kor >= 40) && (math >= 40) && (eng >= 40) && (avg >= 60)) {
 			System.out.println("국어 : " + kor);
 			System.out.println("수학 : " + math);
 			System.out.println("영어 : " + eng);
 			System.out.println("합계 : " + sum);
 			System.out.println("평균 : " + avg);
 			System.out.println("축하합니다, 합격입니다!");
-		}else {
+		} else {
 			System.out.println("불합격입니다.");
 		}
-		
+
 	}
 	
 	public void practice4() {
