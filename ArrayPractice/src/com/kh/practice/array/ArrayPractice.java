@@ -96,69 +96,81 @@ public class ArrayPractice {
 		System.out.print("0 ~ 6 사이 숫자 입력 : ");
 		int num = sc.nextInt(); // 정수를 입력받는 메소드
 
-		if (0 < num || num > 7) {
+		if (num < 0 || num > 6) {
 			System.out.println("잘못 입력하셨습니다.");
-		}
-		else {
+		} else {
 			for (int i = 0; i < days.length; i++) { // 배열 출력
 				if (num == i) {
 					System.out.println(days[i] + "요일");
-		}
-		
-		
-				
-				
-					
-						
-					
+				}
 			}
-		
-			
-				
 		}
 	}
 
 	public void practice7() {
-		
-		Scanner sc = new Scanner(System.in);
-		
+
+		Scanner sc = new Scanner(System.in); // 스캐너 생성
+
 		System.out.print("정수 : ");
-		int num1 = sc.nextInt();
-		
-		int[] arr = new int[num1];
-		
+		int num = sc.nextInt(); // 정수를 입력받는 메소드
+
+		int[] arr = new int[num]; // 배열 생성
+
+		int sum = 0;
+
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print("배열 " + i + "번째 인덱스에 넣을 값 : ");
-			int num2 = sc.nextInt();
+			arr[i] = sc.nextInt(); // 정수를 입력받는 메소드
 		}
-		//
+		for (int i = 0; i < arr.length; i++) { // 배열 출력
+			System.out.print(arr[i] + " ");
+			sum += arr[i];
+		}
+		System.out.println();
+
+		System.out.println("총 합 : " + sum);
 	}
-	
+
 	public void practice8() {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in); // 스캐너 생성
 
 		while (true) {
 			System.out.print("정수 : ");
-			int num = sc.nextInt();
+			int num = sc.nextInt(); // 정수를 입력받는 메소드
 
-			int[] arr = new int[num];
+			int[] arr = new int[num]; // 배열 생성
 
 			if (num >= 3 && num % 2 == 1) {
 				for (int i = 0; i < arr.length; i++) {
 					arr[i] = i + 1;
-				}
-				for (int i = 0; i < arr.length; i++) {
 					System.out.print(arr[i] + " ");
 				}
-				break;
-
+				
 			} else {
 				System.out.println("다시 입력하세요.");
-
 			}
-		}
+		}//
+	}
+	
+	public void practice9() {
 
+		Scanner sc = new Scanner(System.in); // 스캐너 생성
+
+		System.out.print("치킨 이름을 입력하세요 : ");
+		String menu = sc.nextLine(); // 문자열을 엔터 전까지 입력받는 메소드
+
+		String[] chicken = { "양념", "후라이드" }; // 배열 생성
+
+		for (int i = 0; i < chicken.length; i++) { // 배열 출력
+			if (chicken[i].equals(menu)) {
+				System.out.println(chicken[i] + "치킨 배달 가능");
+				break;
+			} else {
+				System.out.println(menu + "치킨은 없는 메뉴입니다.");
+				break;
+			}
+		}//
 	}
 
 	public void practice10() {
@@ -182,5 +194,76 @@ public class ArrayPractice {
 		for (int i = 0; i < arrCopy.length; i++) { // 값 출력
 			System.out.print(arrCopy[i]);
 		}
+	}
+	
+	public void practice11() {
+		
+		int[] num = new int[10]; // 배열 생성
+		
+		for (int i = 0; i < num.length; i++) {
+			int random = (int)(Math.random() * 10 + 1);
+			num[i] = random; 
+			System.out.print(num[i] + " ");
+		}
+	}
+	
+	public void practice12() {
+
+		int[] num = new int[10];
+
+		for (int i = 0; i < num.length; i++) {
+			int random = (int)(Math.random() * 10 + 1);
+			num[i] = random;
+			System.out.print(num[i] + " ");
+		}
+	} //
+	
+	public void practice13() {
+		
+		int[] num = new int[10];
+
+		for (int i = 0; i < num.length; i++) {
+			int random = (int)(Math.random() * 10 + 1);
+			num[i] = random;
+			System.out.print(num[i] + " ");
+		}
+	} //
+	
+	public void practice14() {
+		
+		int[] lotto = new int[6];
+		
+		for (int i = 0; i < lotto.length; i++) {
+			int num = (int)(Math.random() * 45 + 1);
+			lotto[i] = num;
+			
+		}
+	} //
+
+	public void practice15() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("문자열 : ");
+		String str = sc.nextLine();
+
+		char[] arr = new char[str.length()];
+
+		int count = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = str.charAt(i);
+			System.out.print(arr[i] + " ");
+			count++;
+		}
+		System.out.println();
+
+		System.out.print("문자 개수 : " + count);
+	}
+	
+	public void practice16() {
+		
+		
+		
 	}
 }
