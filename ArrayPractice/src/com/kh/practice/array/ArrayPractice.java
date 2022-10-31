@@ -96,16 +96,25 @@ public class ArrayPractice {
 		System.out.print("0 ~ 6 사이 숫자 입력 : ");
 		int num = sc.nextInt(); // 정수를 입력받는 메소드
 
-		for (int i = 0; i < days.length; i++) { // 배열 출력
-			if (num > 0 ||  num < 7) {
-				System.out.println("잘못 입력하셨습니다.");
+		if (0 < num || num > 7) {
+			System.out.println("잘못 입력하셨습니다.");
+		}
+		else {
+			for (int i = 0; i < days.length; i++) { // 배열 출력
+				if (num == i) {
+					System.out.println(days[i] + "요일");
+		}
+		
+		
 				
 				
-			} for (int i = 0; i < days.length; i++) {
-				System.out.print(i + "요일");
-				break;
+					
+						
+					
 			}
+		
 			
+				
 		}
 	}
 
