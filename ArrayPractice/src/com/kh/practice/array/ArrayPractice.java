@@ -337,7 +337,7 @@ public class ArrayPractice {
 
 			boolean flag = true;
 
-			for (int j = 0; j < i; j++) {
+			for (int j = 0; j < i; j++) { // 중복된 문자열 제거
 				if (arr[i] == arr[j]) {
 					flag = false;
 				}
@@ -357,6 +357,43 @@ public class ArrayPractice {
 	}
 
 	public void practice16() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int size = sc.nextInt();
+
+		sc.nextLine();
+
+		int[] arr = new int[size];
+		
+		while (true) {
+
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] = i + 1;
+				
+				System.out.print(arr[i] + "번째 문자열 : ");
+				String str = sc.nextLine();
+			}
+			for (int j = 0; j < arr.length; j++) {
+
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+				char ch = sc.nextLine().charAt(0);
+
+				if (ch == 'y') {
+					System.out.print("더 입력하고 싶은 개수 : ");
+					int num = sc.nextInt();
+
+					sc.nextLine();
+
+					break;
+
+				} else {
+					System.out.print("[" + "]");
+					return;
+				}
+			}
+		}
 
 	}
 }
