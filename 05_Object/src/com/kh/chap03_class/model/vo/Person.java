@@ -69,4 +69,8 @@ public class Person {
 		return email;
 	}
 	
+	public String information() {
+		
+		return "아이디 : " + id + ", 비밀번호 : " + pwd + ", 이름 : " + name + ", 나이 : " + age + ", 성별 : " + gender + ", 전화번호 : " + phone + ", 이메일 : " + email;
+	}
 }
