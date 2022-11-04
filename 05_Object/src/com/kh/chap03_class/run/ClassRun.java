@@ -6,7 +6,7 @@ import com.kh.chap03_class.model.vo.Product;
 public class ClassRun {
 
 	public static void main(String[] args) {
-
+		
 		// 객체 생성 => new
 		Person p = new Person();
 		
@@ -57,7 +57,17 @@ public class ClassRun {
 		System.out.println(p2.information());
 		
 		System.out.println();
+		System.out.println("====================");
+		System.out.println();
 		
+		Person ps1 = new Person();
+		System.out.println(ps1.information());
+
+		Person ps2 = new Person("우영우", "1234", 20, "010-1234-5678");
+		System.out.println(ps2.information());
+		
+		Person ps3 = new Person("abcd", "1234", "우영우", 20, 'F', "010-1234-5678", "abcd@efg.com");
+		System.out.println(ps3.information());
 	}
 
 }

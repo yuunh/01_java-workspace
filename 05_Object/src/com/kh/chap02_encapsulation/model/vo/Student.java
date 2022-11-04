@@ -11,6 +11,25 @@ public class Student { // 내가 만든 나만의 자료형
 	private int mathScore;
 	
 	// 생성부 선언
+	public Student() {
+		System.out.println("Student 객체가 생성됐습니다.");
+	}
+	
+	public Student(String name, Double height, int korScore) {
+		this.name = name;
+		this.height = height;
+		this.korScore = korScore;
+	}
+	
+	public Student(String name, int age, Double height, int korScore, int mathScore) {
+		this.name = name;
+		this.age = age;
+		this.height = height;
+		this.korScore = korScore;
+		this.mathScore = mathScore;
+	}
+	
+	
 	
 	// 메소드부 선언
 	
@@ -81,5 +100,9 @@ public class Student { // 내가 만든 나만의 자료형
 	
 	public int getMathScore() {
 		return mathScore;
+	}
+	
+	public String information() {
+		return "이름 : " + name + ", 나이 : " + age + ", 키 : " + height + ", 국어점수 : " + korScore + ", 수학점수 : " + mathScore;
 	}
 }

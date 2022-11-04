@@ -45,6 +45,9 @@ public class FieldRun {
 		// FieldTest3.STA_FIN = "ㅎㅎㅎㅎㅎ"; => 변경 불가
 		
 		System.out.println(Math.PI);
+		// Math.PI = 2.9999;
+		
+		int random = (int)(Math.random()); // 기울어짐 -> static
 	}
 
 }

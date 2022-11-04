@@ -10,7 +10,28 @@ public class Person {
 	private char gender;
 	private String phone;
 	private String email;
+
+	public Person() {
+		System.out.println("Person 객체가 생성됐습니다.");
+	}
 	
+	public Person(String name, String pwd, int age, String phone) {
+		this.name = name;
+		this.pwd = pwd;
+		this.age = age;
+		this.phone = phone;
+	}
+	
+	public Person(String id, String pwd, String name, int age, char gender, String phone, String email) {
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.phone = phone;
+		this.email = email;
+	}
+
 	// setter 만들기 => 7개
 	public void setId(String id) {
 		this.id = id;
