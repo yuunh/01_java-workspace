@@ -1,14 +1,16 @@
 package com.hw1.model.vo;
 
-public class Product {
+public class Product { // 클래스 시작
 
-	private String productld;
-	private String productName;
-	private String productArea;
-	private int price;
-	private double tax;
+	// 필드부
+	private String productld; // 상품아이디
+	private String productName; // 상품명
+	private String productArea; // 생산지
+	private int price; // 가격
+	private double tax; // 부가세비율
 	
-	
+	// 생성자부
+	// 기본생성자
 	public Product() {}
 	
 	public Product(String productId, String productName, String productArea, int price, double tax) {
@@ -19,6 +21,8 @@ public class Product {
 		this.tax = tax;
 	}
 	
+	// 메소드부
+	// getter setter
 	
 	public void setProductId(String productId) {
 		this.productld = productId;
@@ -65,4 +69,4 @@ public class Product {
 	public String information() {
 		return productld + " " + productName + " " + productArea + " " + price + " " + tax;
 	}
-}
+} // 클래스 끝
