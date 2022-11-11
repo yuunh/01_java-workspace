@@ -1,4 +1,4 @@
-package kh.com.chap01_poly.part02_electronic.model.vo;
+package com.kh.chap01_poly.part02_electronic.model.vo;
 
 public class Tablet extends Electronic {
 
@@ -21,7 +21,7 @@ public class Tablet extends Electronic {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", penFlag = " + penFlag;
+		return super.toString() + ", penFlag = " + (penFlag ? "있음" : "없음");
 	}
 	
 	
