@@ -15,10 +15,10 @@ public class StringRun {
 		
 		B_StringMethodTest b = new B_StringMethodTest();
 		
-		// b.method1();
+		 b.method1();
 		
 		C_StringTokenizerTest c = new C_StringTokenizerTest();
-		c.method1();
+		// c.method1();
 	}
 
 }
