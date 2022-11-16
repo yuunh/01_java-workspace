@@ -7,8 +7,8 @@ import com.kh.practice.token.controller.TokenController;
 public class TokenMenu {
 
 	// 필드
-	TokenController tc = new TokenController();
-	Scanner sc = new Scanner(System.in);
+	private TokenController tc = new TokenController();
+	private Scanner sc = new Scanner(System.in);
 
 	public void mainMenu() {
 		
@@ -61,4 +61,32 @@ public class TokenMenu {
 		
 		System.out.println(one + " 문자가 들어간 개수 : " + tc.findChar(input, one));
 	}
+	
+	
+	public void name() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("단을 입력하세요 : ");
+		int num = sc.nextInt();
+		
+		for (int i = 1; i < 10; i++) {
+			System.out.printf("%d * %d = %d\n", num, i, num*i);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
