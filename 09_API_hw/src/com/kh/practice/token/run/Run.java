@@ -7,8 +7,8 @@ public class Run {
 	public static void main(String[] args) {
 
 		TokenMenu m = new TokenMenu();
-		m.mainMenu();
-		
+		// m.mainMenu();
+		m.name();
 	}
 
 }
