@@ -1,8 +1,11 @@
 package com.kh.chap02_inherit.run;
 
+import java.util.ArrayList;
+
 import com.kh.chap02_inherit.model.vo.Airplane;
 import com.kh.chap02_inherit.model.vo.Car;
 import com.kh.chap02_inherit.model.vo.Ship;
+import com.kh.chap02_inherit.model.vo.Vehicle;
 
 public class InheritRun /*extends Object*/ {
 
@@ -21,6 +24,25 @@ public class InheritRun /*extends Object*/ {
 		c.howToMove();
 		s.howToMove();
 		a.howToMove();
+		
+		System.out.println("=================================");
+
+		ArrayList<Vehicle> list = new ArrayList<Vehicle>();
+		
+		list.add(new Car("벤틀리", 12.5, "세단", 4));
+		list.add(new Ship("낚시배", 3, "어선", 1));
+		list.add(new Airplane("종이비행기", 0.01, "제트기", 10, 4));
+		
+		// 1. 단순 for문 (for loop문)
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i).information());
+		}
+		// 2. 향상된 for문
+		for (Vehicle v : list) { // v = list.get(0) => v = list.get(1)
+			System.out.println(v.information());
+		}
+		
+		System.out.println("=================================");
 		
 		/*
 		 * 상속의 장점

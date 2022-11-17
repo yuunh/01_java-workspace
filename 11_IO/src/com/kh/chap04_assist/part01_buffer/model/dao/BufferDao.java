@@ -1,6 +1,9 @@
 package com.kh.chap04_assist.part01_buffer.model.dao;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -70,6 +73,35 @@ public class BufferDao {
 			bw.write("저리가세요");
 			// 버퍼라는 공간에 계속 쌓아놨다가 한번에 출력 => 속도 향상에 좋다.
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	// 프로그램 <----- 파일 (입력)
+	public void fileRead() {
+		
+		// FileReader : 파일과 연결해서 2바이트 단위로 데이터를 입력받을 수 있는 기반스트림
+		// BefferedReader : 속도 향상에 도움이 되는 보조 스트림
+		
+		try (BufferedReader br = new BufferedReader(new FileReader("c_buffer.txt"))) {
+			// br.read();
+			// br.readLine(); // String으로 받아옴
+			/*
+			System.out.println(br.readLine());
+			System.out.println(br.readLine());
+			System.out.println(br.readLine());
+			
+			System.out.println(br.readLine()); // 파일의 끝을 만나면 null 출력
+			System.out.println(br.readLine());
+			*/
+			String value = null;
+			while ((value = br.readLine()) != null) { // null 비교시에는 equals 안써도됨 / 동등비교(!= ==) 가능
+				System.out.println(value);
+			}
+			
+		} catch (FileNotFoundException e) { // 자식 => 위에 있어야한다. 없어도 상관 없음
+			e.printStackTrace();
+		} catch (IOException e) { // 부모 => 다 받아줌
 			e.printStackTrace();
 		}
 	}
