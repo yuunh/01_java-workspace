@@ -62,31 +62,4 @@ public class TokenMenu {
 		System.out.println(one + " 문자가 들어간 개수 : " + tc.findChar(input, one));
 	}
 	
-	
-	public void name() {
-		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("단을 입력하세요 : ");
-		int num = sc.nextInt();
-		
-		for (int i = 1; i < 10; i++) {
-			System.out.printf("%d * %d = %d\n", num, i, num*i);
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
