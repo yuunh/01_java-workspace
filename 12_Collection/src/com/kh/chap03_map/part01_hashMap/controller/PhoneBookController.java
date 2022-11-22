@@ -18,6 +18,26 @@ public class PhoneBookController {
 		}
 		
 		return search;
-		
 	}
-}
+}	
+	
+
+//public void addPhone(String key, String value) {
+    
+    
+//   try {
+//       prop.store(new FileOutputStream("PhoneBook.properties"), "==PhoneBook==");
+//       OutputStream fr = new FileOutputStream("Phone.properties");
+//       
+//       if(key.equals(fr)) {
+//          System.out.println("이미 있는 연락처입니다.");
+//       } else {
+//          prop.setProperty(key, value);
+//          System.out.println(key +"의 연락처 생성 완료.");
+//       }
+//    } catch (FileNotFoundException e) {
+//       e.printStackTrace();
+//    } catch (IOException e) {
+//       e.printStackTrace();
+//    }      
+    
