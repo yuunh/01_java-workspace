@@ -71,6 +71,10 @@ public class InetRun {
 		 * - UDP 방식 : 데이터 전송 속도가 빠름! 신뢰성 없는 데이터 전달될 수 있음! (데이터를 빠른 속도로 전송하고자 하는 프로그램 : 실시간 동영상 서비스)
 		 */
 		
+		 
 	}
-
+String str = "하이,그래,잘가,응아니야";
+		  		String[] arr = str.split(",");
+		 		for (int i = 0; i < arr.length; i++) {
+		 			System.out.println(arr[i]);
 }
