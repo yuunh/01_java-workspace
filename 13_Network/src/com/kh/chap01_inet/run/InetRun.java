@@ -73,8 +73,5 @@ public class InetRun {
 		
 		 
 	}
-String str = "하이,그래,잘가,응아니야";
-		  		String[] arr = str.split(",");
-		 		for (int i = 0; i < arr.length; i++) {
-		 			System.out.println(arr[i]);
+
 }
